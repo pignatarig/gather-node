@@ -1,0 +1,26 @@
+<div class="single-item-container">
+  <div class="single-item-card">
+    <div class="single-item-contents">
+      <div id="delete-item-warning-message">
+        Are you sure you want to delete the item: {{item.title}}?
+      </div>
+      <div class="single-item-img">
+        <img src="{{item.imageUrl}}" alt="">
+      </div>
+      <div class="single-item-navigation">
+        <form id="delete-{{item._id}}" class="delete-form" action="/items/{{item._id}}/delete" method="post">
+          <a class='delete-button' href="#" onclick="this.parentNode.submit();">
+            <div class="button update-button">
+              Delete
+            </div>
+          </a>
+        </form>
+        <a class="cancel-button" href="/">
+          <div class="button update-button">
+            Cancel
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
