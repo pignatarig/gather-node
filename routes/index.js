@@ -36,7 +36,7 @@ router.get('/items/:id/delete', async (req, res, next) => {
 
 router.post('/items/:id/delete', async (req, res, next) => {
   const item = await Item.findById(req.params.id);
-  item.remove().then(function (product) {
+  item.remove().then(function() {
     res.redirect('/');
   }).catch(function (err) {
     res.redirect('/');
